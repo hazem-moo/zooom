@@ -14,7 +14,7 @@ export const basketSllice = createSlice({
 
 export const { addToBasket } = basketSllice.actions
 
-export let selectItemWithId = (state, id) =>
+export const selectItemWithId = (state, id) =>
 state.basket.items.filter(item => item.id === id )
 
 export default basketSllice.reducer

@@ -7,8 +7,7 @@ import { addToBasket, selectItemWithId } from '../redux/basketSlice'
 const Food = ({ navigation, route }) => {
     const { item } = route.params
     const dispatch = useDispatch()
-        const items = useSelector(state => selectItemWithId( state, id ))
-    
+    const items = useSelector(state => selectItemWithId( id ) )
     const addItemToBasket = () => {
         dispatch( addToBasket({ item }) )
     }
